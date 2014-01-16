@@ -1,29 +1,5 @@
 from BigNumber import *
 
-def add(arr, n):
-    for i in range(len(n)):
-        curr = n[len(n) - i - 1]
-        curr_sum = arr[i] + int(curr)
-        if curr_sum >= 10:
-            arr[i] = curr_sum - 10
-            try:
-                x = arr[i + 1]
-            except IndexError:
-                arr.append(0)
-
-            arr[i + 1] += 1
-        else:
-            arr[i] = curr_sum
-
-
-def to_string(num_array):
-    num_string = ""
-    for i in range(len(num_array)):
-        num_string += str(num_array.pop())
-
-    return num_string
-
-
 def main():
     question = ["37107287533902102798797998220837590246510135740250",
                 "46376937677490009712648124896970078050417018260538",
