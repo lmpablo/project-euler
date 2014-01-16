@@ -1,3 +1,5 @@
+from BigNumber import *
+
 def add(arr, n):
     for i in range(len(n)):
         curr = n[len(n) - i - 1]
@@ -124,12 +126,12 @@ def main():
                 "20849603980134001723930671666823555245252804609722",
                 "53503534226472524250874054075591789781264330331690"]
 
-    sum_value = [0] * 50
+    big_number = BigNumber("0")
     
     for q in question:
-        add(sum_value, q)
+        big_number.Add(q)
 
-    print to_string(sum_value)
+    print big_number
 
 
 if __name__ == '__main__':
