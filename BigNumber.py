@@ -25,6 +25,14 @@ class BigNumber(object):
             else:
                 self.digits[i] = curr_sum
 
+    def ToString(self):
+        num_string = ""
+        num_array = self.digits[:]
+        for i in range(len(num_array)):
+            num_string += str(num_array.pop())
+
+        return num_string
+
     def __str__(self):
         num_string = ""
         num_array = self.digits[:]
